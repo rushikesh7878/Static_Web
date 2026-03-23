@@ -44,3 +44,9 @@ VITE_GOOGLE_SCRIPT_URL=your_web_app_url_here
 ```
 
 11. Restart the Vite dev server after adding the environment variable.
+
+New submissions now send `Submitted At` in a readable format like:
+
+```text
+23 Mar 2026, 05:42:18 pm
+```

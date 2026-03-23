@@ -33,16 +33,16 @@ function SocialIcon({ label }) {
 
 export default function Footer({ meta }) {
   return (
-    <footer className="footer">
-      <div className="container footer-grid">
-        <div>
+    <footer className="footer reveal-section" data-reveal="footer">
+      <div className="container footer-grid reveal-stagger">
+        <div className="reveal-item">
           <span className="footer-logo" aria-hidden="true">
             S
           </span>
           <p className="footer-brand">{meta.brand}</p>
           <p>{meta.tagline}</p>
         </div>
-        <div>
+        <div className="reveal-item">
           <p className="footer-title">Quick Links</p>
           <a href="#home">Home</a>
           <a href="#caseStudies">Our Results</a>
@@ -50,7 +50,7 @@ export default function Footer({ meta }) {
           <a href="#process">Our Process</a>
           <a href="#contact">Contact</a>
         </div>
-        <div>
+        <div className="reveal-item">
           <p className="footer-title">Email</p>
           <a href={`mailto:${meta.email}`}>{meta.email}</a>
           <p className="footer-title social-title">Social</p>
@@ -63,7 +63,7 @@ export default function Footer({ meta }) {
             ))}
           </div>
         </div>
-        <div>
+        <div className="reveal-item">
           <p className="footer-title">Policy</p>
           <a href="#">Privacy Policy</a>
           <p className="footer-note">We respond within 24 hours.</p>

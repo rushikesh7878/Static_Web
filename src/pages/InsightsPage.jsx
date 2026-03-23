@@ -20,16 +20,17 @@ const insightItems = [
 
 export default function InsightsPage() {
   return (
-    <section id="insights" className="section section-theme-insights">
+    <section id="insights" className="section section-theme-insights reveal-section" data-reveal="section">
       <div className="container">
         <SectionTitle
+          className="reveal-item"
           eyebrow="Insights"
           title="Playbooks and Analysis"
           description="Optional thought leadership section to demonstrate strategic depth."
         />
-        <div className="insight-grid">
+        <div className="insight-grid reveal-stagger">
           {insightItems.map((item) => (
-            <article key={item.title} className="insight-card">
+            <article key={item.title} className="insight-card reveal-item">
               <h3>{item.title}</h3>
               <p>{item.excerpt}</p>
               <a href="#contact">Talk to our team</a>

@@ -12,7 +12,7 @@ export default function TestimonialSlider({ items }) {
   }, [items.length])
 
   return (
-    <div className="testimonial-slider">
+    <div className="testimonial-slider reveal-item">
       <blockquote>{items[active].quote}</blockquote>
       <p className="author">- {items[active].author}</p>
       <div className="dots" aria-label="testimonial navigation">

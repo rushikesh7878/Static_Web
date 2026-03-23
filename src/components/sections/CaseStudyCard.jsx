@@ -2,7 +2,7 @@ import ResultGraph from '../common/ResultGraph'
 
 export default function CaseStudyCard({ study, compact = false }) {
   return (
-    <article className="case-card">
+    <article className="case-card reveal-item">
       <h3>{study.title}</h3>
       <div className="case-grid">
         <div>

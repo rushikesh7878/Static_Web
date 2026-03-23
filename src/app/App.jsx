@@ -1,15 +1,15 @@
-import { Suspense, lazy, useEffect, useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import { siteMeta } from '../data/content'
 import { useHashRoute } from '../hooks/useHashRoute'
-
-const HomePage = lazy(() => import('../pages/HomePage'))
-const CaseStudiesPage = lazy(() => import('../pages/CaseStudiesPage'))
-const ServicesPage = lazy(() => import('../pages/ServicesPage'))
-const ProcessPage = lazy(() => import('../pages/ProcessPage'))
-const InsightsPage = lazy(() => import('../pages/InsightsPage'))
-const ContactPage = lazy(() => import('../pages/ContactPage'))
+import { useScrollReveal } from '../hooks/useScrollReveal'
+import HomePage from '../pages/HomePage'
+import CaseStudiesPage from '../pages/CaseStudiesPage'
+import ServicesPage from '../pages/ServicesPage'
+import ProcessPage from '../pages/ProcessPage'
+import InsightsPage from '../pages/InsightsPage'
+import ContactPage from '../pages/ContactPage'
 
 const routes = {
   home: HomePage,
@@ -23,6 +23,7 @@ const routes = {
 export default function App() {
   const routeKey = useHashRoute(Object.keys(routes), 'home')
   const CurrentPage = useMemo(() => routes[routeKey] || HomePage, [routeKey])
+  useScrollReveal(routeKey)
 
   useEffect(() => {
     const scrollToRouteTop = () => {
@@ -47,9 +48,7 @@ export default function App() {
     <div className="site-shell">
       <Header routeKey={routeKey} />
       <main className="main-content">
-        <Suspense fallback={<div className="page-loading">Loading page...</div>}>
-          <CurrentPage />
-        </Suspense>
+        <CurrentPage />
       </main>
       <Footer meta={siteMeta} />
     </div>
