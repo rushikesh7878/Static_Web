@@ -291,11 +291,10 @@ ul {
 .hero-panel {
   background: rgba(10, 10, 10, 0.78);
   color: var(--text);
-  border: 1px solid var(--line);
   padding: 1.5rem;
   border-radius: 1.35rem;
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-strong), var(--glow);
+  box-shadow: var(--shadow-strong);
 }
 
 .hero-panel p {
@@ -384,7 +383,6 @@ ul {
 
 .service-card {
   background: #111111;
-  border: 1px solid var(--line);
   border-radius: 1.05rem;
   padding: 1.15rem;
   transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background-color 260ms ease;
@@ -425,7 +423,6 @@ ul {
 
 .case-card {
   background: #101010;
-  border: 1px solid var(--line);
   border-radius: 1.1rem;
   padding: 1.25rem;
   transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
@@ -524,7 +521,6 @@ ul {
 
 .process-step {
   background: #111111;
-  border: 1px solid var(--line);
   border-radius: 1rem;
   padding: 1.05rem;
   transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
@@ -559,7 +555,6 @@ ul {
 
 .testimonial-slider {
   background: #101010;
-  border: 1px solid var(--line);
   border-radius: 1.1rem;
   padding: 1.4rem;
   max-width: 860px;
@@ -609,7 +604,6 @@ ul {
 
 .insight-card {
   background: #111111;
-  border: 1px solid var(--line);
   border-radius: 1rem;
   padding: 1rem;
   transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
@@ -648,7 +642,6 @@ ul {
 
 .contact-form {
   background: #101010;
-  border: 1px solid var(--line);
   border-radius: 1.1rem;
   padding: 1rem;
   display: grid;
@@ -767,7 +760,6 @@ ul {
   position: relative;
   width: min(100%, 28rem);
   padding: 2rem 1.4rem 1.45rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1.4rem;
   overflow: hidden;
   text-align: center;
@@ -957,7 +949,6 @@ ul {
 .tech-wrap {
   margin-top: 1.2rem;
   padding: 1rem;
-  border-top: 1px solid var(--line);
   border-radius: 1.1rem;
   background: #101010;
   transition: box-shadow 260ms ease, border-color 260ms ease, transform 260ms ease;
@@ -1274,7 +1265,6 @@ ul {
 .testimonial-slider,
 .contact-form,
 .tech-wrap {
-  border: 1px solid var(--line);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
 }
 
