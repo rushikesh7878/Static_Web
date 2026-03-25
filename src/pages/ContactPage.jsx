@@ -5,7 +5,7 @@ const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL
 const INITIAL_FORM = {
   name: '',
   email: '',
-  website: '',
+  hasWebsite: '',
   goal: '',
 }
 
@@ -117,8 +117,8 @@ export default function ContactPage() {
             description="Share your current setup and targets. We will respond within 24 hours."
           />
           <p>
-            Tell us your website and main growth goal. We will return a scoped, channel-specific
-            action plan.
+            Tell us whether you already have a website and what your main growth goal is. We will
+            return a scoped, channel-specific action plan.
           </p>
         </div>
         <form className="contact-form reveal-item" onSubmit={handleSubmit}>
@@ -144,16 +144,33 @@ export default function ContactPage() {
             required
           />
 
-          <label htmlFor="website">Website URL</label>
-          <input
-            id="website"
-            name="website"
-            type="url"
-            placeholder="https://"
-            value={formData.website}
-            onChange={handleChange}
-            required
-          />
+          <label>Do you have website?</label>
+          <div className="contact-radio-group" role="radiogroup" aria-label="Do you have website?">
+            <label className="contact-radio-option" htmlFor="hasWebsiteYes">
+              <input
+                id="hasWebsiteYes"
+                name="hasWebsite"
+                type="radio"
+                value="Yes"
+                checked={formData.hasWebsite === 'Yes'}
+                onChange={handleChange}
+                required
+              />
+              Yes
+            </label>
+            <label className="contact-radio-option" htmlFor="hasWebsiteNo">
+              <input
+                id="hasWebsiteNo"
+                name="hasWebsite"
+                type="radio"
+                value="No"
+                checked={formData.hasWebsite === 'No'}
+                onChange={handleChange}
+                required
+              />
+              No
+            </label>
+          </div>
 
           <label htmlFor="goal">Main Goal</label>
           <textarea

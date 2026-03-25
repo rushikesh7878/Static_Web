@@ -5,7 +5,7 @@
 3. In that sheet, add these headers in row 1:
 
 ```text
-Name | Email | Website | Goal | Submitted At | Source
+Name | Email | Has Website | Goal | Submitted At | Source
 ```
 
 4. Open `Extensions -> Apps Script`.
@@ -19,7 +19,7 @@ function doPost(e) {
   sheet.appendRow([
     data.name || '',
     data.email || '',
-    data.website || '',
+    data.hasWebsite || '',
     data.goal || '',
     data.submittedAt || '',
     data.source || '',
